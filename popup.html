@@ -1,0 +1,70 @@
+<!-- 
+	popup.html : 
+	Intro:		This Html is displayed when user clicks on the Extension Icon Image 
+	Location:	On the Main Extension Folder
+	
+--> 
+
+
+<html>
+	<head>
+		<title> CATCH THE PHISH </title>
+		<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+		
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		
+		<!-- FULL -->
+		<link href="css/jquery.dataTables.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="js/jquery.dataTables.js"></script>
+		
+		<!-- Notiifcation -->
+		<link href="css/toastr.min.css" rel="stylesheet"/>
+		<script src="js/toastr.min.js"></script>
+		
+		<!-- Over Js File -->
+		<script type="text/javascript" src="js/popup.js"></script>
+		<link href="css/popup.css" rel="stylesheet" type="text/css">
+		
+	</head>
+	
+	<body>
+		<pre id="header" align="center" > CATCH THE PHISH </pre>
+		
+		<!--
+		<div>
+			<button type="button" class="btn btn-default btn-sm closeBtn">Close</button>
+			<button type="button" class="btn btn-default btn-sm reloadBtn">Reload</button>
+		</div>
+		
+		<div> 
+			<pre> <label id="errorDisplay"> </label> <label id="successDisplay"> </label> </pre>
+		</div>
+		-->
+		<div>
+			<pre>Info: Certified Domains:<span class="certified" />Allowed Domains:<span class="allowed" />Blocked Domains:<span class="blocked"/></pre>
+		</div> 
+		
+		<div>
+			<pre class="statusUpdate" align="center"> </pre>
+		</div>
+		
+		<table id="hostsDetails" align="center">
+			
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Hosts</th>
+					<th>Count</th>
+					<th>Status</th>
+					<th>Perform Action(C/ B/ A)</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				
+			</tbody>
+		</table>
+
+	</body>
+</html>

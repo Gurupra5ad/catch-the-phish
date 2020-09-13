@@ -1,0 +1,42 @@
+{
+	"name": "CATCH THE PHISH",
+
+	"version": "3.01",
+
+	"description": "Trying to Identify Known Websites and Qualifying them, Site Cleaner Plus",
+
+	"manifest_version": 2,
+  
+	"browser_action": {
+		"default_popup": "popup.html",
+		"default_title": "Click to View Domain Details",
+		"default_icon":"images/popupIcon.png"
+	},
+	
+	"options_page": "config.html",
+	
+	"permissions": [
+		"tabs",
+		"webRequest",
+		"webRequestBlocking",
+		"<all_urls>",
+		"storage"
+	],
+  
+	"web_accessible_resources": [
+		"images/*.png"
+	],
+	
+	"background": {
+		"scripts": [ "js/lodash.min.js", "js/low.min.js", "js/LocalStorage.min.js", "js/background.js"]
+	},
+	
+	"content_scripts": [
+		{
+			"js": ["js/jquery-3.4.1.js", "js/content.js"],
+			"css": ["css/content.css"],
+			"matches": ["<all_urls>"]
+		}
+	]
+ 
+}

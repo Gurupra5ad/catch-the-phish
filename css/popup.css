@@ -1,0 +1,89 @@
+/* popup.css
+This is Comment Section
+
+*/
+
+body {
+	width: 500px;
+	height: 100%;
+}
+
+
+
+table {
+/*	font-family: arial, sans-serif; */
+	table-layout: auto;
+	width: 100%;
+}
+
+
+td, th {
+	border: 1px solid black;
+	text-align: center;
+	padding: 2px;
+}
+
+/*
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+*/
+/********************/
+
+
+button.closeBtn {
+    float: left;
+}
+button.reloadBtn {
+    float: right;
+}
+
+
+
+/****Button CSS -> allowed Button ***/
+
+.allowed:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: text-top;
+    background-color: transparent;
+    background-position : center center;
+    background-repeat:no-repeat;
+	background-image : url("../images/allowed_icon.png");
+}
+
+
+/****Button CSS -> blocked Button ***/
+
+.blocked:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: text-top;
+    background-color: transparent;
+    background-position : center center;
+    background-repeat:no-repeat;
+	background-image : url("../images/blocked_icon.png");
+}
+
+/****Button CSS -> certified Button ***/
+
+.certified:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: text-top;
+    background-color: transparent;
+    background-position : center center;
+    background-repeat:no-repeat;
+	background-image : url("../images/certified_icon.png");
+}

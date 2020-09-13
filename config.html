@@ -1,0 +1,563 @@
+<!--
+	config.html
+-->
+<html>
+	<head>
+		<title> Phishing Detector Plus </title>
+		
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		
+		<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		
+		<!-- FULL -->
+		<link href="css/jquery.dataTables.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="js/jquery.dataTables.js"></script>
+
+		<!--  Database -->
+		<script type="text/javascript" src="js/lodash.min.js"></script>
+		<script type="text/javascript" src="js/low.min.js"></script>
+		<script type="text/javascript" src="js/LocalStorage.min.js"></script>
+		
+		<!-- Notiifcation -->
+		<link href="css/toastr.min.css" rel="stylesheet"/>
+		<script src="js/toastr.min.js"></script>
+		
+		<!-- Over Js File -->
+		<script type="text/javascript" src="js/config.js"></script>
+		<link href="css/config.css" rel="stylesheet" type="text/css">
+		<style>
+        
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: 'Poppins', sans-serif;
+			}
+			
+			body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				min-height: 100vh;
+				background: #ffffff;
+			}
+			
+			.cardsContainer {
+				position: relative;
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+				width: 920px;
+			}
+	
+			.containerHome {
+				position: relative;
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+			}
+			
+			.cardsContainer .card {
+				height: 240px;
+				margin: 20px;
+				padding: 15px 15px;
+				background: #ebf5fc;
+				border-radius: 40px;
+				box-shadow: -6px -6px 20px rgba(255,255,255,1), 6px 6px 20px rgba(0,0,0,0.1);
+			}
+	
+			.containerHome .card {
+				width: 340px;
+				height: 340px;
+				margin: 20px;
+				padding: 15px 15px;
+				background: #ebf5fc;
+				border-radius: 40px;
+				box-shadow: -6px -6px 20px rgba(255,255,255,1), 6px 6px 20px rgba(0,0,0,0.1);
+			}
+
+			.backcard {
+				max-width: 160px;
+				max-height: 160px;
+				margin: 20px;
+				padding: 15px 15px;
+				background: #ebf5fc;
+				border-radius: 40px;
+				box-shadow: -6px -6px 20px rgba(255,255,255,1), 6px 6px 20px rgba(0,0,0,0.1);
+			}
+			
+			.backcard:hover, .containerHome .card:hover, .cardsContainer .card:hover {
+				box-shadow: inset -6px -6px 20px rgba(255,255,255,0.5), inset 6px 6px 20px rgba(0,0,0,0.05);
+			}
+			
+			.backcard .card .imgBx, .containerHome .card .imgBx, .cardsContainer .card .imgBx {
+				position: relative;
+				text-align: center;
+			}
+			
+			.cardsContainer .card .imgBx img {
+				max-width: 200px;
+			}
+	
+			.containerHome .card .imgBx img {
+				max-width: 300px;
+			}
+
+			.backcard .imgBx img {
+				max-width: 120px;
+				max-height: 120px;
+			}
+			
+
+			.cardsContainer .card:hover .imgBx,
+			.containerHome .card:hover .imgBx,
+			.backcard:hover .imgBx {
+				transform: scale(0.98);
+			}
+
+			.flex-container {
+				display: -webkit-flex;
+				display: flex;
+				-webkit-flex-flow: row nowrap;
+				flex-flow: row nowrap;
+			}
+			.flex-item {
+				-webkit-flex: none;
+				flex: none;
+				background: #f1f1f1;
+			}
+			.flex-item:nth-child(2) {
+				-webkit-flex: 1 0 auto;
+				flex: 1 0 auto;
+				padding-left: 10px;
+			}
+
+			.container {
+				max-width: 45%;
+			}
+
+
+		</style>
+	</head>
+	
+	<body>
+
+
+		<div id="mainBar">
+
+			<div class="containerHome">
+        
+				<div id="homeDiv" class="card">
+					<div class="imgBx">
+						<img src="../images/home_dashboard.png" alt="">
+					</div>
+				</div> 
+		
+			</div>
+		
+			<div class="cardsContainer">
+				
+				<div id="certifiedlistDiv" class="card">
+					<div class="imgBx">
+						<img src="../images/certified_flag.png" alt="">
+					</div>
+				</div>
+				<div id="blockedlistDiv" class="card">
+					<div class="imgBx">
+						<img src="../images/blocked_flag.png" alt="">
+					</div>
+				</div>
+				<div id="whitelistDiv" class="card">
+					<div class="imgBx">
+						<img src="../images/allowed_flag.png" alt="">
+					</div>
+				</div>
+		
+				<div id="helpDiv" class="card">
+					<div class="imgBx">
+						<img src="../images/help_flag.png" alt="">
+					</div>
+				</div>
+		
+				<div id="aboutusDiv" class="card">
+					<div class="imgBx">
+						<img src="../images/aboutus_flag.png" alt="">
+					</div>
+				</div>
+		
+				<div id="futurescopeDiv" class="card">
+					<div class="imgBx">
+						<img src="../images/futurescope_flag.png" alt="">
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		
+		<div class="mainContentSection">
+
+			<div class="divHidden Home flex-container">
+				
+				<div class="backcard flex-item">
+					<div class="imgBx">
+						<img src="../images/back_flag.png" alt="">
+					</div>
+				</div>
+
+				<div class="mainHome flex-item" style="width: 50%">
+
+					<div class="container">
+						<div id="myCarousel" class="carousel slide" data-ride="carousel">
+						  <!-- Indicators -->
+						  <ol class="carousel-indicators">
+							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#myCarousel" data-slide-to="1"></li>
+							<li data-target="#myCarousel" data-slide-to="2"></li>
+							<li data-target="#myCarousel" data-slide-to="3"></li>
+							<li data-target="#myCarousel" data-slide-to="4"></li>
+						  </ol>
+					  
+						  <!-- Wrapper for slides -->
+						  <div class="carousel-inner">
+							<div class="item active">
+								<img src="images/PhishingIdentification_Step1.png" alt="Los Angeles" width="500" height="500">
+							</div>
+					  
+							<div class="item active">
+								<img src="images/PhishingIdentification_Step2.png" alt="Los Angeles" width="500" height="500">
+							</div>
+						  
+							<div class="item active">
+								<img src="images/PhishingIdentification_Step3.png" alt="Los Angeles" width="500" height="500">
+							</div>
+
+							<div class="item active">
+								<img src="images/PhishingIdentification_Step4.png" alt="Los Angeles" width="500" height="500">
+							</div>
+
+							<div class="item active">
+								<img src="images/PhishingIdentification_Step5.png" alt="Los Angeles" width="500" height="500">
+							</div>
+
+						  </div>
+					  
+						  <!-- Left and right controls -->
+						  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+							<span class="sr-only">Previous</span>
+						  </a>
+						  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+							<span class="sr-only">Next</span>
+						  </a>
+						</div>
+					</div>
+
+					<h1> Detection using Extension </h1>
+					<p>
+
+
+						<h3 style="width: 60%">
+							Doing a Quick Google Search We found.... 
+							<br>
+						
+							A very quick Search on Google, lands us to Wikipedia and on Wikipedia it explains Phishing as follow: "Phishing is the fraudulent attempt to obtain sensitive information such as usernames, passwords and credit card details by disguising oneself as a trustworthy entity in an electronic communication. Typically carried out by email spoofing or instant messaging, it often directs users to enter personal information at a fake website which matches the look and feel of the legitimate site."
+						
+							<br>
+							In simple words, phishing is tricking users to provide their sensitive information on a fake website(which looks similar to the original one).
+							<br>
+						
+							Objective
+								<li>Our main objective is to detect phishing websites and for that we have come up with a strategy to firstly identify the Real websites and  certify them personally using the software this will always indicate the user that they are accessing the correct website.</li>
+								<li>Over here the software is a chrome extension</li>
+
+							Approach 
+								<li>Classifying Websites that are Original and providing users Granular approach to block websites that they feel is fake and inappropriate		</li>
+
+							Why only Detection, Suggestion & Alert in Phishing why we cannot directly block it?
+							<br>
+							Phishing is a way to trick user in  that they are visiting or accessing 
+							<br>
+
+							Hii!! This Extension will help you Identify Websites and let you Classify them as Certified(Safe & Usefull).
+						</h3>
+					</p>
+				</div>
+				
+			</div>
+
+			<!-- Displays BlockList Data -->
+			<div class="divHidden blockHostsDetails BlockList flex-container">
+
+				<div class="backcard flex-item">
+					<div class="imgBx">
+						<img src="../images/back_flag.png" alt="">
+					</div>
+				</div>
+
+				<div class="flex-item">
+
+					<button type="button" class="btn btn-dark addTableData" align="right">Add New Data</button>
+					<button type="button" class="btn btn-dark addToDatabase" align="right">Add To Database</button>
+					<br>
+					<table id="blockHostsDetails" class="table table-striped table-bordered pure-table pure-table-horizontal" myIdentifier="blockList">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th myIdentifier="hostnameKeyword">Hostname Keywords</th>
+								<th myIdentifier="urlKeyword">Url Keywords</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- Table Data -->
+						</tbody>
+					</table>
+
+				</div>
+				
+			</div>
+			
+			<!-- Displays CertitfiedList Data -->
+			<div class="divHidden certifiedHostsDetails CertifedList flex-container">
+
+				<div class="backcard flex-item">
+					<div class="imgBx">
+						<img src="../images/back_flag.png" alt="">
+					</div>
+				</div>
+
+				<div class="flex-item">
+					
+					<button type="button" class="btn btn-dark addTableData" align="right">Add New Data</button>
+					<button type="button" class="btn btn-dark addToDatabase" align="right">Add To Database</button>
+					<table id="certifiedHostsDetails" class="table table-striped table-bordered pure-table pure-table-horizontal" myIdentifier="certifiedList">
+						<thead>
+						<tr>
+							<th>#</th>
+							<th myIdentifier="certifiedHost">Certified Host</th>
+							<th myIdentifier="certifiedFor">Certified For</th>
+							<th>Action</th>
+						</tr>
+						</thead>
+						<tbody>
+							<!-- Table Data -->
+						</tbody>
+					</table>
+
+				</div>
+			</div>
+			
+			<!-- Displays WhiteList Data -->
+			<div class="divHidden whiteListHostsDetails WhiteList flex-container">
+
+				<div class="backcard flex-item">
+					<div class="imgBx">
+						<img src="../images/back_flag.png" alt="">
+					</div>
+				</div>
+
+				<div class="flex-item">
+
+					<button type="button" class="btn btn-dark addTableData" align="right">Add New Data</button>
+					<button type="button" class="btn btn-dark addToDatabase" align="right">Add To Database</button>
+					<table id="whiteListHostsDetails" class="table table-striped table-bordered pure-table pure-table-horizontal" myIdentifier="whiteList">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th myIdentifier="hostnameKeyword">Hostname Keywords</th>
+								<th myIdentifier="urlKeyword">Url Keywords</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- Table Data -->
+						</tbody>
+					</table>
+
+				</div>
+
+			</div>
+			
+			<div class="divHidden Help flex-container">
+
+				<div class="backcard flex-item">
+					<div class="imgBx">
+						<img src="../images/back_flag.png" alt="">
+					</div>
+				</div>
+
+				<div class="flex-item">
+					<h1>Help Section</h1>
+					<h3>
+
+						How To Use This Extension? <br>
+						<br>
+						This Extension Helps you Identify Websites that are Visited By the Users <br>
+						and the List is Shown when the User Clicks on the PopUp Icon of the Extension <br>
+						User Can Either Block Domains that <br>
+						they feel are suspicous , related to advertisments , trackers or unwanted can be directly blocked by user in just one click <br>
+						Our Extension heps user to get the list of domains that they have accidentally accessed 
+						and giving the user priviledge to Allow/Block and Certify It.
+						Certify is the way to Recognize that the Website is Proper 
+
+					</h3>
+				</div>
+				 
+			</div>
+			
+			<div class="divHidden About flex-container">
+
+				<div class="backcard flex-item">
+					<div class="imgBx">
+						<img src="../images/back_flag.png" alt="">
+					</div>
+				</div>
+
+				<div class="flex-item">
+					<h1>About The Project Idea</h1>
+
+					<h3>
+	
+						What will our Extension Provide? <br>
+						Display List of Domain/FQDN Accessed for each website  <br>
+						Add Website to Certified List <br>
+						Add Website to Block List <br>
+						Add Website to White list (Exception) <br>
+						Configure Certified List using Regex <br>
+						Configure Block List using Regex <br>
+						Configure White List (Exception) using Regex <br>
+	
+	
+	
+					</h3>
+				</div>
+
+			</div>
+			
+			<div class="divHidden FutureScope flex-container">
+
+				<div class="backcard flex-item">
+					<div class="imgBx">
+						<img src="../images/back_flag.png" alt="">
+					</div>
+				</div>
+
+				<div class="flex-item">
+
+					<h1> FutureScope Section </h1>
+
+					<h3>
+
+						<b>Lets bring in the Category</b>
+
+						<li>Sites can be categorized inside Category and as per that websites can be blocked or certified.</li>
+							For Example:
+								<li>Block all Malicious Category.</li>
+								<li>Allow all computer & Tech Category.</li>
+								<li>This will further enhance user experience</li>
+						<li>Blocking Includes Domain
+							For Example: 
+								<li>adding ads-systemx.com to block List is much more better than adding 1.ads-systemx.com, newsfeeds.ads-systemx.com etc.</li>
+						<li>Cloud Based Sync: Google Account Database Sync</li>
+							<li>No Matter which machine you use if you sync chrome with your Google account & install the plug-in you are good to go with the previous database.</li>
+							<li>Advance Recovery if the current machine fails.</li>
+
+
+					</h3>
+
+				</div>
+
+				
+
+			</div>
+			
+		</div>
+
+
+				<!--------------------- Modal -------------->
+		
+		<!--- Edit Data Modal -->
+		<div class="modal fade" id="detailsShowModal" role="dialog">
+			<div class="modal-dialog">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+				  <h3 class="modal-title">Edit Details</h3>
+				</div>
+				<div class="modal-body">
+				  <div class="row dataTable">
+					<div class="col-md-4">
+					  <label class="control-label">Name</label>
+					</div>
+					<div class="col-md-8">
+					  <input type="text" class="form-control" maxlength="500" id="detailsShowModal_Name" name="NameField">
+					</div>
+				  </div>
+				  <br>
+				  <div class="row dataTable">
+					<div class="col-md-4">
+					  <label class="control-label">Value</label>
+					</div>
+					<div class="col-md-8">
+					  <input type="text" class="form-control" maxlength="500" id="detailsShowModal_Value" name="ValueField">
+					</div>
+				  </div>
+				  <br>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" id="detailsShowModal_ApplyModal" data-dismiss="modal">Apply</button>
+				</div>
+			  </div>
+			  <!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		  </div>
+		  <!-- /.modal -->
+  
+		  <!--- Add New Field Modal -->
+		  <div class="modal fade" id="addNewDataModal" role="dialog">
+			<div class="modal-dialog">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+				  <h3 class="modal-title">Edit Details</h3>
+				</div>
+				<div class="modal-body">
+				  <div class="row dataTable">
+					<div class="col-md-4">
+					  <label class="control-label">Name</label>
+					</div>
+					<div class="col-md-8">
+					  <input type="text" class="form-control" maxlength="500" id="addNewDataModal_Name" name="NameField">
+					</div>
+				  </div>
+				  <br>
+				  <div class="row dataTable">
+					<div class="col-md-4">
+					  <label class="control-label">Value</label>
+					</div>
+					<div class="col-md-8">
+					  <input type="text" class="form-control" maxlength="500" id="addNewDataModal_Value" name="ValueField">
+					</div>
+				  </div>
+				  <br>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-default" id="addNewDataModal_ApplyModal" data-dismiss="modal">Add</button>
+				</div>
+			  </div>
+			  <!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		  </div>
+		  <!-- /.modal -->
+		  
+  
+		  <!--------------------- Modal -------------->
+
+	</body>
+	
+</html>

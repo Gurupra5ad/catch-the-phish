@@ -1,0 +1,106 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>Vertical Navigation Menu</title>
+       <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+            }
+            
+            * {
+                box-sizing: border-box;
+                border: 0px solid grey;
+                font-family: 'Open Sans', sans-serif;
+            }
+            
+            .container {
+                border-radius: 5px;
+                margin: 200px 0;
+                box-shadow: 1px 1px 5px #ddd;
+                width: 250px;
+            }
+            
+            .list {
+                list-style-type: none;
+                width: 250px;
+                position: relative;
+            }
+            
+            a {
+                text-decoration: none;
+                color: #6b7278;
+                font-weight: 700;
+                font-size: 15px;
+                display: block;
+                padding: 15px;
+                transition: 0.3s ease;
+                position: relative;
+                margin-left: 60px;
+            }
+            
+            i {
+                margin-right: 10px;
+                margin-left: -50px;
+            }
+            
+            .list>li {
+                width: 250px;
+                transition: 0.3s ease;
+                margin-left: -40px;
+            }
+            
+            li:nth-of-type(1) {
+                border-left: 5px solid #00e600;
+                border-top-left-radius: 5px;
+            }
+            
+            li:nth-of-type(2) {
+                border-left: 5px solid #ffff66;
+            }
+            
+            li:nth-of-type(3) {
+                border-left: 5px solid #ff6666;
+            }
+            
+            li:nth-of-type(4) {
+                border-left: 5px solid #6666ff;
+                border-bottom-left-radius: 5px;
+            }
+            
+            li:hover {
+                background-color: #eee;
+            }
+            
+            .active {
+                background-color: #eee;
+            }
+            
+            /*
+			span {
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background: red;
+                float: right;
+                text-align: center;
+                font-size: 11px;
+                color: white;
+            }*/
+        </style>
+    </head>
+     
+    <body>
+        <div class='container'>
+            <ul class='list'>
+                <li><a href='#'><i class="fa fa-user"></i>EDIT PROFILE</a></li>
+                <li><a href='#'><i class="fa fa-envelope"></i>MESSAGES<!--<span>5</span>--></a></li>
+                <li><a href='#'><i class="fa fa-cog"></i>APP SETTINGS</a></li>
+                <li><a href='#'><i class="fa fa-sign-out"></i>LOGOUT</a></li>
+            </ul>
+        </div>   
+    </body>
+    </html>
